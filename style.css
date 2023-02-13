@@ -323,7 +323,7 @@ p {
         position: absolute;
         display: flex;
         flex-direction: column;
-        top:88% !important;
+        top:89% !important;
         height: 300px;
     }
     .new {
@@ -371,6 +371,12 @@ p {
         margin-left: 0px !important;
         /* padding-top: 1px; */
     }
+    .sec1 {
+        padding-left: 0px !important;
+    }
+    .sec2{
+        padding-left: 0px !important;
+    }
 }
 
 
@@ -390,6 +396,12 @@ p {
     .head-result {
         font-size: 25px;
     }
+    .sec1 {
+        padding-left: 0px !important;
+    }
+    .sec2{
+        padding-left: 0px !important;
+    }
 }
 
 @media all and (max-width: 450px) {
@@ -399,5 +411,11 @@ p {
         position: relative !important;
         margin-top: 1200px !important;
         left: 39%;
+    }
+    .sec1 {
+        padding-left: 0px !important;
+    }
+    .sec2{
+        padding-left: 0px !important;
     }
 }
