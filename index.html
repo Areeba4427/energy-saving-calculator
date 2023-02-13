@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <title>PEC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- <div class="background"> -->
+    <!-- <div class="shape"></div>
+        <div class="shape"></div> -->
+    </div>
+    <form>
+        <div class="header">
+            <!-- <img src='pec-logo.svg' style="height:120px;width:160px;" class="logo"> -->
+            <h3 class="calculator-header">Energy Savings Calculator</h3>
+
+        </div>
+        <div class="energy-saving">
+            <div class="cal-div">
+                <div class="existing child">
+                    <div class="sub-header sec1">
+                        <h4>Existing System</h4>
+                        <span>Simple Energy Savings Estimator * actual numbers <br> require an onsite energy lighting
+                            audit</span>
+                    </div>
+                    <div class="input-labels">
+                        <div class="label1">
+                            <label for="username">Pick your state</label>
+                            <div class="select">
+                                <select class="decorated" id="selectstate">
+                                    <option value="select">Choose</option>
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="District of Columbia">District of Columbia</option>
+                                    <option value="East North Central">East North Central</option>
+                                    <option value="East South Central">East South Central</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Middle Atlantic">Middle Atlantic</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Montana">Montana</option>
+                                    <option value="Mountain">Mountain</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New England">New England</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Pacific Contiguous">Pacific Contiguous</option>
+                                    <option value="Pacific Noncontiguous">Pacific Noncontiguous</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Atlantic">South Atlantic</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West North Central">West North Central</option>
+                                    <option value="West South Central">West South Central</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+
+
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="label2">
+                            <label for="username">Cost in cents</label>
+                            <input type="text" id="cent-cost" readonly>
+                        </div>
+                    </div>
+                    <div class="input-labels">
+                        <div class="label3">
+                            <label for="username">Hours of operation</label>
+                            <select class="decorated" id="selecthours">
+                                <option value="select">Choose</option>
+                                <option value="8760">8760</option>
+                                <option value="6500">6500</option>
+                                <option value="4750">4750</option>
+                                <option value="4380">4380</option>
+                                <option value="2080">2080</option>
+                                <option value="2000">2000</option>
+                            </select>
+                        </div>
+
+                        <div class="label4">
+                            <label for="username">Fixtures</label>
+                            <select class="decorated" id="selectmetals">
+                                <option value="select">Choose</option>
+                                <option value="Biax Fluorescent">Biax Fluorescent</option>
+                                <option value="Circline Fluorescent">Circline Fluorescent</option>
+                                <option value="Compact Fluorescent">Compact Fluorescent</option>
+                                <option value="Halogen">Halogen</option>
+                                <option value="High Pressure Sodium">High Pressure Sodium</option>
+                                <option value="Incandescent">Incandescent</option>
+                                <option value="LED (Lamp or Fixture)">LED (Lamp or Fixture)</option>
+                                <option value="Linear Fluorescent">Linear Fluorescent</option>
+                                <option value="Linear Fluorescent - Shatter Coated">Linear Fluorescent - Shatter Coated
+                                </option>
+                                <option value="Low Pressure Sodium">Low Pressure Sodium</option>
+                                <option value="Mercury Vapor">Mercury Vapor</option>
+                                <option value="Metal Halide">Metal Halide</option>
+                                <option value="U-Bend Fluorescent">U-Bend Fluorescent</option>
+                                <option value="U-Bend Fluorescent - Shatter Coated">U-Bend Fluorescent - Shatter Coated
+                                </option>
+
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="input-labels">
+                        <div class="label5">
+                            <label>Wattage (Est. Avg)</label>
+                            <input type="number" id="wattage" readonly>
+
+                        </div>
+                        <div class="label6">
+                            <label>Quantity (input)</label>
+                            <input type="number" id="quantity">
+
+                        </div>
+                    </div>
+                    <div class="input-labels">
+                        <div class="label7">
+                            <label>Annual kWh for Existing lighting</label>
+                            <input type="number" id="Annualkwh" readonly>
+
+                        </div>
+
+                        <div class="label8">
+                            <label>Est. Annual Cost</label>
+                            <input id="Annualcost" readonly>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="new child">
+                    <div class="sub-header sec2">
+                        <h4>New System</h4>
+                        <span>New System (Assuming Avg. 5% reduction in fixture count)</span>
+
+                    </div>
+                    <div class="input-labels">
+                        <div class="new1 change ">
+                            <label>Avg. Cost per kW(no change)</label>
+                            <input type="text" id="cent-cost2" readonly>
+
+                        </div>
+                        <div class="new2 change">
+                            <label> Hours of Operation(no change)</label>
+                            <input type="number" id="hours-operation" readonly>
+                        </div>
+                    </div>
+                    <div class="input-labels">
+                        <div class="new3">
+                            <label>Avg. Wattage of PEC Fixtures</label>
+                            <input type="number" id="avg-watt">
+                        </div>
+
+                        <div class="new4">
+                            <label>Total Fixture count</label>
+                            <input type="number" id="fixture" readonly>
+                        </div>
+                    </div>
+                    <div class="input-labels">
+                        <div class="new5">
+                            <label>Est. Annual kWh</label>
+                            <input type="number" id='Annualkwh-result' readonly>
+                        </div>
+                        <div class="new6">
+                            <label>Est. Annual cost</label>
+                            <input type="text" id="Annualcost-result" readonly>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="grey-line"></div>
+                <div class="result-div">
+                    <!-- <label class="result-label head-result">Savings</label> -->
+
+                    <div class="result1">
+                        <!-- (Percent reduction) -->
+                        <!-- <label class="result-label">Est Savings kWh </label> -->
+                        <label id="result-kwh" class="result-label head-result">Estimated Savings kWh<p>percent
+                                reducation</p></label>
+                    </div>
+
+
+                    <div class="result2">
+                        <!-- (Dollars per year) -->
+                        <label class="result-label  head-result" id="result-cost">Estimated Savings<p>Dollars per year
+                            </p></label>
+                        <span class="result-label"></span>
+                    </div>
+                </div>
+
+    </form>
+    <script src="asset.js"></script>
+</body>
+
+</html>
