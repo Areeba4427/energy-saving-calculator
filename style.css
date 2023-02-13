@@ -8,7 +8,7 @@
 
 body {
     background-color: #324354;
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
 .background {
@@ -23,7 +23,7 @@ body {
 
 form {
     height: 890px;
-    width: 1700px;
+    width: 1800px;
     background-color: #ffff !important;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -89,7 +89,7 @@ input {
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 6px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
 }
 
@@ -143,7 +143,7 @@ input {
     /* appearance: none; */
     background-color: #ffff;
     color: #324354;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .decorated:hover {
@@ -204,7 +204,7 @@ button {
 }
 
 span {
-    font-size: 18px;
+    font-size: 22px;
 
 }
 
@@ -226,9 +226,9 @@ span {
 .result-label {
     color: #ffff !important;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 700;
     padding-top: 8px;
-    padding-left: 6vw;
+    padding-left: 4vw;
     width: 850px;
 }
 
@@ -237,7 +237,7 @@ span {
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px;
     color: #ffff
 }
 
@@ -264,7 +264,11 @@ p {
       
         /* margin-bottom: 50px !important; */
     }
-
+    .sec2 {
+       padding-top: 30px;
+        padding-left: 95px;
+    }
+    
     .grey-line {
         display: none;
     }
@@ -290,6 +294,7 @@ p {
 @media all and (max-width: 1360px) {
     form {
         width: 1000px;
+        left:40%;
        
     }
 
@@ -306,6 +311,7 @@ p {
 @media all and (max-width: 1060px) {
     form {
         width: 800px;
+        left:38%;
     }
     .result-div {
         position: absolute;
@@ -324,6 +330,12 @@ p {
         height: 2250px;
         position: relative !important;
     margin-top: 1200px !important;
+    left:36%;
+    }
+    
+    .sec2 {
+       
+        padding-left: 68px;
     }
     
 .input-labels {
@@ -340,16 +352,23 @@ p {
     display: flex;
     flex-direction: column;
 }
-
+.new {
+    margin-left: 0px !important;
+    /* padding-top: 1px; */
+}
 }
 
 
-@media all and (max-width: 560px) {
+@media all and (max-width: 590px) {
     form{
         width: 450px;
         height: 2350px;
         position: relative !important;
         margin-top: 1200px !important;
-       
+       left:30%;
+    }
+    .calculator-header{
+        text-align: center;
+        line-height:40px;
     }
 }
