@@ -372,3 +372,12 @@ p {
         line-height:40px;
     }
 }
+@media all and (max-width: 450px) {
+    form{
+        width: 420px;
+        height: 2350px;
+        position: relative !important;
+        margin-top: 1200px !important;
+       left:33%;
+    }
+}
