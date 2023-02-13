@@ -184,59 +184,61 @@
                         <span>New System (Assuming Avg. 5% reduction in fixture count)</span>
 
                     </div>
-                    <div class="input-labels">
-                        <div class="new1 change ">
-                            <label>Avg. Cost per kW(no change)</label>
-                            <input type="text" id="cent-cost2" readonly>
+                    <div class="change">
+                        <div class="input-labels">
+                            <div class="new1 change ">
+                                <label>Avg. Cost per kW(no change)</label>
+                                <input type="text" id="cent-cost2" readonly>
 
+                            </div>
+                            <div class="new2 change">
+                                <label> Hours of Operation(no change)</label>
+                                <input type="number" id="hours-operation" readonly>
+                            </div>
                         </div>
-                        <div class="new2 change">
-                            <label> Hours of Operation(no change)</label>
-                            <input type="number" id="hours-operation" readonly>
-                        </div>
-                    </div>
-                    <div class="input-labels">
-                        <div class="new3">
-                            <label>Avg. Wattage of PEC Fixtures</label>
-                            <input type="number" id="avg-watt">
-                        </div>
+                        <div class="input-labels">
+                            <div class="new3">
+                                <label>Avg. Wattage of PEC Fixtures</label>
+                                <input type="number" id="avg-watt">
+                            </div>
 
-                        <div class="new4">
-                            <label>Total Fixture count</label>
-                            <input type="number" id="fixture" readonly>
+                            <div class="new4">
+                                <label>Total Fixture count</label>
+                                <input type="number" id="fixture" readonly>
+                            </div>
                         </div>
-                    </div>
-                    <div class="input-labels">
-                        <div class="new5">
-                            <label>Est. Annual kWh</label>
-                            <input type="number" id='Annualkwh-result' readonly>
+                        <div class="input-labels">
+                            <div class="new5">
+                                <label>Est. Annual kWh</label>
+                                <input type="number" id='Annualkwh-result' readonly>
+                            </div>
+                            <div class="new6">
+                                <label>Est. Annual cost</label>
+                                <input type="text" id="Annualcost-result" readonly>
+                            </div>
                         </div>
-                        <div class="new6">
-                            <label>Est. Annual cost</label>
-                            <input type="text" id="Annualcost-result" readonly>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="grey-line"></div>
-                <div class="result-div">
-                    <!-- <label class="result-label head-result">Savings</label> -->
-
-                    <div class="result1">
-                        <!-- (Percent reduction) -->
-                        <!-- <label class="result-label">Est Savings kWh </label> -->
-                        <label id="result-kwh" class="result-label head-result">Estimated Savings kWh<p>percent
-                                reducation</p></label>
-                    </div>
-
-
-                    <div class="result2">
-                        <!-- (Dollars per year) -->
-                        <label class="result-label  head-result" id="result-cost">Estimated Savings<p>Dollars per year
-                            </p></label>
-                        <span class="result-label"></span>
                     </div>
                 </div>
+            </div>
+            <div class="grey-line"></div>
+            <div class="result-div">
+                <!-- <label class="result-label head-result">Savings</label> -->
+
+                <div class="result1">
+                    <!-- (Percent reduction) -->
+                    <!-- <label class="result-label">Est Savings kWh </label> -->
+                    <label id="result-kwh" class="result-label head-result">Estimated Savings kWh<p>percent
+                            reducation</p></label>
+                </div>
+
+
+                <div class="result2">
+                    <!-- (Dollars per year) -->
+                    <label class="result-label  head-result" id="result-cost">Estimated Savings<p>Dollars per year
+                        </p></label>
+                    <span class="result-label"></span>
+                </div>
+            </div>
 
     </form>
     <script src="asset.js"></script>

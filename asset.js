@@ -151,7 +151,7 @@ function calkwh(arg1, arg2, p1, p2) {
   if (isNaN(cal_function)) {
     cal_function = 0;
   }
-  document.getElementById("result-kwh").innerHTML = "Estimated Savings kWh:" + cal_function + "%"  + "<p>percent reduction</p>";
+  document.getElementById("result-kwh").innerHTML = "Estimated Savings kWh:" + cal_function.toFixed(2) + "%"  + "<p>percent reduction</p>";
   document.getElementById("result-cost").innerHTML = "Estimated Savings: " + "$" + cost + "<p>Dollars per year</p>";
 }
 

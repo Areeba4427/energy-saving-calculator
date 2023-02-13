@@ -22,8 +22,8 @@ body {
 
 
 form {
-    height: 890px;
-    width: 1800px;
+    height: 930px;
+    width: 2100px;
     background-color: #ffff !important;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -82,15 +82,27 @@ label {
 
 input {
     display: block;
-    height: 39px;
-    width: 290px;
+    height: 51px;
+    width: 340px;
     background-color: rgba(255, 255, 255, 0.07);
     border: 0.5px solid #acb0b3;
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 6px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 300;
+}
+
+.decorated {
+    width: 340px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    /* border: none; */
+    border: 0.5px solid #acb0b3;
+    /* appearance: none; */
+    background-color: #ffff;
+    color: #324354;
+    font-size: 22px;
 }
 
 ::placeholder {
@@ -112,7 +124,9 @@ input {
 .sec1 {
     padding-left: 72px !important;
 }
-
+.change{
+    padding-top: 5px;
+}
 .sec2 {
     padding-bottom: 20px;
     padding-left: 68px;
@@ -132,18 +146,6 @@ input {
 .child {
     width: 50%;
     float: left;
-}
-
-.decorated {
-    width: 285px;
-    padding: 10px 5px;
-    border-radius: 5px;
-    /* border: none; */
-    border: 0.5px solid #acb0b3;
-    /* appearance: none; */
-    background-color: #ffff;
-    color: #324354;
-    font-size: 20px;
 }
 
 .decorated:hover {
@@ -220,6 +222,7 @@ span {
     border-bottom-right-radius: 12px;
     margin: 0%;
     background-color: #A0C93A;
+    height: 250px !important;
 
 }
 
@@ -244,7 +247,7 @@ p {
 @media all and (max-width: 2160px) {
 
     form {
-        width: 1400px;
+        width: 1600px;
     }
     .result-label {
         width: 810px;
@@ -259,7 +262,7 @@ p {
 
     form {
         width: 1200px;
-        height: 1400px;
+        height: 1500px;
         /* top: 75%; */
         /* bottom: 50%; */
         position: relative !important;
@@ -294,6 +297,9 @@ p {
     .result-label {
         max-width: 600px !important;
     }
+    .result-div{
+        height: 290px !important;
+    }
 }
 
 @media all and (max-width: 1360px) {
@@ -324,7 +330,7 @@ p {
         display: flex;
         flex-direction: column;
         top:89% !important;
-        height: 300px;
+        height: 350px !important;
     }
     .new {
         margin-left: 0px !important;
@@ -341,7 +347,7 @@ p {
 
     form {
         width: 650px;
-        height: 2250px;
+        height: 2350px;
         position: relative !important;
         margin-top: 1200px !important;
         left: 36%;
@@ -369,7 +375,7 @@ p {
 
     .new {
         margin-left: 0px !important;
-        /* padding-top: 1px; */
+      
     }
     .sec1 {
         padding-left: 0px !important;
@@ -383,7 +389,7 @@ p {
 @media all and (max-width: 590px) {
     form {
         width: 450px;
-        height: 2350px;
+        height: 2420px;
         position: relative !important;
         margin-top: 1200px !important;
         left: 31%;
@@ -407,7 +413,7 @@ p {
 @media all and (max-width: 450px) {
     form {
         width: 420px;
-        height: 2350px;
+        height: 2420px;
         position: relative !important;
         margin-top: 1200px !important;
         left: 39%;
@@ -417,5 +423,8 @@ p {
     }
     .sec2{
         padding-left: 0px !important;
+    }
+    .result-label{
+        font-size: 22px;
     }
 }
