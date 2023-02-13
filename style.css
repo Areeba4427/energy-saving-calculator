@@ -16,8 +16,8 @@ body {
     height: 20px;
     position: absolute;
     /* transform: translate(-50%,-50%); */
-    left: 50%;
-    top: 50%;
+    /* left: 50%; */
+    /* top: 50%; */
 }
 
 
@@ -28,7 +28,7 @@ form {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 40%;
-    left: 44%;
+   left: 44%;
     border-radius: 12px;
     /* border: 2px solid rgba(255,255,255,0.1); */
     box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
@@ -256,10 +256,13 @@ p {
 
     form {
         width: 1200px;
-        height: 1500px;
-        /* top: 60%; */
+        height: 1400px;
+        /* top: 75%; */
         /* bottom: 50%; */
-        margin-bottom: 50px !important;
+        position: relative !important;
+        margin-top: 800px !important;
+      
+        /* margin-bottom: 50px !important; */
     }
 
     .grey-line {
@@ -287,6 +290,7 @@ p {
 @media all and (max-width: 1360px) {
     form {
         width: 1000px;
+       
     }
 
     .result-label {
@@ -303,20 +307,49 @@ p {
     form {
         width: 800px;
     }
+    .result-div {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 
 @media all and (max-width: 860px) {
+   .calculator-header{
+    font-size: 40px;
+   }
     form {
-        width: 800px;
-        height: 1950px;
+        width: 650px;
+        height: 2250px;
+        position: relative !important;
+    margin-top: 1200px !important;
     }
     
 .input-labels {
     display: flex;
     flex-direction: column !important;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-evenly; */
     min-width: 100%;
 }
 
+.result-div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
 }
 
+}
+
+
+@media all and (max-width: 560px) {
+    form{
+        width: 450px;
+        height: 2350px;
+        position: relative !important;
+        margin-top: 1200px !important;
+       
+    }
+}
