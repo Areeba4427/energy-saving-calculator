@@ -257,7 +257,7 @@ p {
     form {
         width: 1200px;
         height: 1500px;
-        top: 60%;
+        /* top: 60%; */
         /* bottom: 50%; */
         margin-bottom: 50px !important;
     }
@@ -298,3 +298,25 @@ p {
     
   
 }
+
+@media all and (max-width: 1060px) {
+    form {
+        width: 800px;
+    }
+}
+
+@media all and (max-width: 860px) {
+    form {
+        width: 800px;
+        height: 1950px;
+    }
+    
+.input-labels {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-evenly;
+    min-width: 100%;
+}
+
+}
+
