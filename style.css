@@ -22,8 +22,8 @@ body {
 
 
 form {
-    height: 930px;
-    width: 2100px;
+    height: 1150px;
+    width: 2200px;
     background-color: #ffff !important;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -46,8 +46,8 @@ form * {
 }
 
 input[readonly] {
-    background-color: rgb(239, 233, 233);
-    border: 0.5px solid rgb(239, 233, 233);
+    background-color: rgb(254, 245, 245);
+    border: 0.5px solid rgb(254, 245, 245);
 }
 
 .change {
@@ -55,54 +55,63 @@ input[readonly] {
 }
 
 form h3 {
-    font-size: 50px;
-    font-weight: 8 00;
+    font-size: 70px;
+    font-weight: 700;
     line-height: 33px;
     text-align: left;
     color: #A0C93A;
     padding-left: 30px;
 }
 
-.new {
+/* .new {
     margin-left: -30px !important;
     /* padding-top: 1px; */
-}
-
-h4 {
+*/ h4 {
     font-size: 24px;
     font-weight: 600;
 }
 
 label {
     display: block;
-    margin-top: 30px;
-    font-size: 18px;
+    margin-top: 55px;
+    margin-bottom: 5px;
+    font-size: 24px;
     font-weight: 600;
+}
+
+.sec2 {
+    margin-top: 10px;
+    margin-bottom: -45px !important;
+}
+
+.new3,
+.label5 {
+    margin-top: -28px;
 }
 
 input {
     display: block;
-    height: 51px;
-    width: 340px;
+    height: 69px;
+    width: 370px;
     background-color: rgba(255, 255, 255, 0.07);
-    border: 0.5px solid #acb0b3;
+    border: 1px solid #acb0b3;
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 6px;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 300;
 }
 
 .decorated {
-    width: 340px;
-    padding: 10px 5px;
+    width: 370px;
+    padding: 15px 5px;
     border-radius: 5px;
     /* border: none; */
-    border: 0.5px solid #acb0b3;
+    border: 1px solid #acb0b3;
     /* appearance: none; */
     background-color: #ffff;
     color: #324354;
-    font-size: 22px;
+    font-size: 26px;
 }
 
 ::placeholder {
@@ -124,9 +133,11 @@ input {
 .sec1 {
     padding-left: 72px !important;
 }
-.change{
+
+.change {
     padding-top: 5px;
 }
+
 .sec2 {
     padding-bottom: 20px;
     padding-left: 68px;
@@ -168,13 +179,19 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
+h4 {
+    font-size: 26px;
+}
 
+/* .lab div{
+    min-width: 420px !important ;
+} */
 .grey-line {
     width: 1px;
     height: 50%;
     background-color: rgb(221, 213, 213);
     position: absolute;
-    left: 49%;
+    left: 50%;
     top: 24%;
 }
 
@@ -206,7 +223,7 @@ button {
 }
 
 span {
-    font-size: 22px;
+    font-size: 23px;
 
 }
 
@@ -214,7 +231,7 @@ span {
     position: absolute;
     display: flex;
     flex-direction: row;
-    top: 81%;
+    top: 84%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -226,17 +243,23 @@ span {
 
 }
 
+
 .result-label {
     color: #ffff !important;
     font-size: 30px;
     font-weight: 700;
     padding-top: 8px;
-    padding-left: 4vw;
-    width: 950px;
+    padding-left: 6vw;
+    width: 1050px;
 }
 
 .head-result {
     font-size: 50px;
+}
+
+.body {
+    font-size: 20px;
+    color: #324354;
 }
 
 p {
@@ -248,7 +271,23 @@ p {
 
     form {
         width: 1600px;
+        margin-top: 200px !important;
     }
+
+    .decorated,
+    input {
+        width: 300px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    .sec2 {
+        margin-top: 0px;
+        margin-bottom: -59px !important;
+    }
+
     .result-label {
         width: 810px;
     }
@@ -262,11 +301,11 @@ p {
 
     form {
         width: 1200px;
-        height: 1500px;
+        height: 1820px;
         /* top: 75%; */
         /* bottom: 50%; */
         position: relative !important;
-        margin-top: 800px !important;
+        margin-top: 950px !important;
 
         /* margin-bottom: 50px !important; */
     }
@@ -295,10 +334,12 @@ p {
     }
 
     .result-label {
-        max-width: 600px !important;
+        max-width: 550px !important;
     }
-    .result-div{
+
+    .result-div {
         height: 290px !important;
+
     }
 }
 
@@ -306,12 +347,20 @@ p {
     form {
         width: 1000px;
         left: 40%;
-
+        height: 1850px;
     }
 
     .result-label {
         max-width: 500px !important;
-     
+
+    }
+
+    .result-div {
+        height: 300px !important;
+
+    }
+    .calculator-header{
+        font-size: 50px;
     }
 
 
@@ -329,13 +378,14 @@ p {
         position: absolute;
         display: flex;
         flex-direction: column;
-        top:89% !important;
-        height: 350px !important;
+        top: 89% !important;
+        height: 410px !important;
     }
+
     .new {
         margin-left: 0px !important;
         /* padding-top: 1px; */
-        
+
     }
 
 }
@@ -346,11 +396,11 @@ p {
     }
 
     form {
-        width: 650px;
-        height: 2350px;
+        width: 580px;
+        height: 3100px;
         position: relative !important;
-        margin-top: 1200px !important;
-        left: 36%;
+        margin-top: 1600px !important;
+        left: 32%;
     }
 
     .sec2 {
@@ -375,12 +425,14 @@ p {
 
     .new {
         margin-left: 0px !important;
-      
+
     }
+
     .sec1 {
         padding-left: 0px !important;
     }
-    .sec2{
+
+    .sec2 {
         padding-left: 0px !important;
     }
 }
@@ -389,9 +441,9 @@ p {
 @media all and (max-width: 590px) {
     form {
         width: 450px;
-        height: 2420px;
+        height: 3050px;
         position: relative !important;
-        margin-top: 1200px !important;
+        margin-top: 1600px !important;
         left: 31%;
     }
 
@@ -399,32 +451,53 @@ p {
         text-align: center;
         line-height: 40px;
     }
+
     .head-result {
         font-size: 25px;
     }
+
     .sec1 {
         padding-left: 0px !important;
     }
-    .sec2{
+
+    .sec2 {
         padding-left: 0px !important;
+    }
+    .result-label{
+        font-size: 23px;
     }
 }
 
 @media all and (max-width: 450px) {
     form {
         width: 420px;
-        height: 2450px;
         position: relative !important;
-        margin-top: 1250px !important;
-        left: 39%;
+        height: 3000px;
+        position: relative !important;
+        margin-top: 1550px !important;
+        left: 37%;
     }
+
     .sec1 {
         padding-left: 0px !important;
     }
-    .sec2{
+
+    .sec2 {
         padding-left: 0px !important;
     }
-    .result-label{
+
+    .result-label {
         font-size: 22px;
+    }
+}
+
+@media all and (max-width: 350px) {
+    form {
+        width: 380px;
+        position: relative !important;
+        height: 3000px;
+        position: relative !important;
+        margin-top: 1550px !important;
+        left: 40%;
     }
 }

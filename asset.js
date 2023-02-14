@@ -1,3 +1,9 @@
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+
+});
+
 var select = document.getElementById("selectstate");
 var values = {
   Choose: "0",
@@ -68,43 +74,60 @@ var values = {
 var select1 = document.getElementById("selectmetals");
 var values1 = {
   Choose: "0",
-  "Biax Fluorescent": "121.58",
-  "Circline Fluorescent": "40.50",
-  "Compact Fluorescent": "30.57",
-  Halogen: "370.28",
-  "High Pressure Sodium": "367.57",
-  Incandescent: "279.77",
-  "LED (Lamp or Fixture)": "103.57",
-  "Linear Fluorescent": "196.25",
-  "Linear Fluorescent - Shatter Coated": "196.25",
-  "Low Pressure Sodium": "137.00",
-  "Mercury Vapor": "349.67",
-  "Metal Halide": "580.96",
-  "U-Bend Fluorescent": "72.89",
-  "U-Bend Fluorescent - Shatter Coated": "72.89",
+  "Biax Fluorescent": "105",
+  "Circline Fluorescent": "44",
+  "Compact Fluorescent": "30",
+  Halogen: "150",
+  "High Pressure Sodium": "380",
+  Incandescent: "100",
+  "LED (Lamp or Fixture)": "150",
+  "Linear Fluorescent": "160",
+  "Low Pressure Sodium": "180",
+  "Mercury Vapor": "372",
+  "Metal Halide": "380",
+  "U-Bend Fluorescent": "80",
 
 }
-let result, result1;
+
+var values2 = {
+  Choose: "0",
+  "Biax Fluorescent": "47",
+  "Circline Fluorescent": "20",
+  "Compact Fluorescent": "14",
+  Halogen: "38",
+  "High Pressure Sodium": "95",
+  Incandescent: "25",
+  "LED (Lamp or Fixture)": "135",
+  "Linear Fluorescent": "72",
+  "Low Pressure Sodium": "45",
+  "Mercury Vapor": "93",
+  "Metal Halide": "95",
+  "U-Bend Fluorescent": "36",
+
+}
+
+let result, result1 , result_new;
 select.oninput = function () {
   var selectedValue = select.options[select.selectedIndex].value;
   result = values[selectedValue];
+ 
   document.getElementById("cent-cost").value = "$" + result;
   document.getElementById("cent-cost2").value = "$" + result;
-  console.log(result);
+  
 };
 
 select1.oninput = function () {
   var selectedValue = select1.options[select1.selectedIndex].value;
   result1 = values1[selectedValue];
+  result_new = values2[selectedValue];
   document.getElementById("wattage").value = result1;
-  console.log(result1);
+  document.getElementById("avg-watt").value = result_new;
+ 
 };
 
 const elements = [
   document.getElementById('selectstate'),
   document.getElementById("selectmetals"),
-  document.getElementById("cent-cost"),
-  document.getElementById('avg-watt'),
   document.getElementById("selecthours"),
   document.getElementById("quantity"),
   document.getElementById("wattage")
@@ -125,22 +148,31 @@ elements.forEach(element => {
   element.addEventListener('input', function () {
     const cent = Number(centCost.value.slice(1));
     const hours = Number(selectHours.options[selectHours.selectedIndex].value);
-    document.getElementById("hours-operation").value = Number(selectHours.options[selectHours.selectedIndex].value);
-    annualKwh.value = Math.round((quantity.value * hours * wattage.value) / 1000);
-    annualCost.value = "$" + Math.round((annualKwh.value * cent), 2);
-    fixture.value = ((quantity.value * 0.95)).toFixed(2);
-    annualKwhResult.value = ((hours * avgWatt.value * fixture.value) / 1000).toFixed(2);
-    annualCostResult.value = "$" + Math.round((annualKwhResult.value * cent), 2);
+    const new_hour = document.getElementById("hours-operation");
+    new_hour.value = hours * 0.8 ;
+    annualKwh.value = Math.round((quantity.value * hours * wattage.value) / 1000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    annualCost.value = formatter.format(Math.round((annualKwh.value.replace(/,/g, '') * cent), 2));
+    fixture.value = quantity.value;
+    annualKwhResult.value = (((new_hour.value * avgWatt.value * fixture.value) / 1000).toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    annualCostResult.value = formatter.format(Math.round((annualKwhResult.value.replace(/,/g, '') * cent), 2));
     console.log(annualKwh.value, annualKwhResult.value);
 
-    calkwh(annualKwh.value, annualKwhResult.value, annualCost.value, annualCostResult.value);
+    if (isNaN(annualKwh.value)) {
+      annualKwh.value = 0.00;
+    }
+    if (annualCost.value == '$NaN') {
+      annualCost.value = "$0.00";
+    }
+    
+
+    calkwh(annualKwh.value.replace(/,/g, ''), annualKwhResult.value.replace(/,/g, ''), annualCost.value.replace(/,/g, ''), annualCostResult.value.replace(/,/g, ''));
   });
 });
 
 
 function calkwh(arg1, arg2, p1, p2) {
 
-  const cal_function = (((arg2 - arg1) / arg1).toFixed(2)) * 100;
+  const cal_function = (((arg2 - arg1) / arg1)) * 100;
 
   p1 = Number(p1.slice(1));
   p2 = Number(p2.slice(1));
@@ -151,7 +183,9 @@ function calkwh(arg1, arg2, p1, p2) {
   if (isNaN(cal_function)) {
     cal_function = 0;
   }
-  document.getElementById("result-kwh").innerHTML = "Estimated Savings kWh:" + cal_function.toFixed(2) + "%"  + "<p>percent reduction</p>";
-  document.getElementById("result-cost").innerHTML = "Estimated Savings: " + "$" + cost + "<p>Dollars per year</p>";
+
+
+  document.getElementById("result-kwh").innerHTML = "Estimated Savings kWh: " + cal_function.toFixed(2) + "%"  + "<p>percent reduction</p>";
+  document.getElementById("result-cost").innerHTML = "Estimated Savings: " +  formatter.format(cost) + "<p>Dollars per year</p>";
 }
 

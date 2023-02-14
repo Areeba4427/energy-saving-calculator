@@ -35,7 +35,7 @@
                             audit</span>
                     </div>
                     <div class="input-labels">
-                        <div class="label1">
+                        <div class="label1 lab">
                             <label for="username">Pick your state</label>
                             <div class="select">
                                 <select class="decorated" id="selectstate">
@@ -106,13 +106,13 @@
 
                             </div>
                         </div>
-                        <div class="label2">
+                        <div class="label2 lab">
                             <label for="username">Cost in cents</label>
                             <input type="text" id="cent-cost" readonly>
                         </div>
                     </div>
                     <div class="input-labels">
-                        <div class="label3">
+                        <div class="label3 lab">
                             <label for="username">Hours of operation</label>
                             <select class="decorated" id="selecthours">
                                 <option value="select">Choose</option>
@@ -125,7 +125,7 @@
                             </select>
                         </div>
 
-                        <div class="label4">
+                        <div class="label4 lab">
                             <label for="username">Fixtures</label>
                             <select class="decorated" id="selectmetals">
                                 <option value="select">Choose</option>
@@ -137,39 +137,36 @@
                                 <option value="Incandescent">Incandescent</option>
                                 <option value="LED (Lamp or Fixture)">LED (Lamp or Fixture)</option>
                                 <option value="Linear Fluorescent">Linear Fluorescent</option>
-                                <option value="Linear Fluorescent - Shatter Coated">Linear Fluorescent - Shatter Coated
-                                </option>
                                 <option value="Low Pressure Sodium">Low Pressure Sodium</option>
                                 <option value="Mercury Vapor">Mercury Vapor</option>
                                 <option value="Metal Halide">Metal Halide</option>
                                 <option value="U-Bend Fluorescent">U-Bend Fluorescent</option>
-                                <option value="U-Bend Fluorescent - Shatter Coated">U-Bend Fluorescent - Shatter Coated
-                                </option>
+                               
 
                             </select>
 
                         </div>
                     </div>
                     <div class="input-labels">
-                        <div class="label5">
-                            <label>Wattage (Est. Avg)</label>
+                        <div class="label5 lab">
+                            <label>Wattage <p class="body">(Est. Avg)</p></label>
                             <input type="number" id="wattage" readonly>
 
                         </div>
-                        <div class="label6">
+                        <div class="label6 lab">
                             <label>Quantity (input)</label>
                             <input type="number" id="quantity">
 
                         </div>
                     </div>
                     <div class="input-labels">
-                        <div class="label7">
-                            <label>Annual kWh for Existing lighting</label>
-                            <input type="number" id="Annualkwh" readonly>
+                        <div class="label7 lab">
+                            <label>Annual kWh for lighting</label>
+                            <input id="Annualkwh" readonly>
 
                         </div>
 
-                        <div class="label8">
+                        <div class="label8 lab">
                             <label>Est. Annual Cost</label>
                             <input id="Annualcost" readonly>
 
@@ -179,40 +176,40 @@
 
 
                 <div class="new child">
-                    <div class="sub-header sec2">
+                    <div class="sub-header sec2 lab">
                         <h4>New System</h4>
-                        <span>New System (Assuming Avg. 5% reduction in fixture count)</span>
+                        <span>New System (Assumes Avg. 20% reduction with new control savings)</span>
 
                     </div>
                     <div class="change">
                         <div class="input-labels">
-                            <div class="new1 change ">
-                                <label>Avg. Cost per kW(no change)</label>
+                            <div class="new1 change lab">
+                                <label>Avg. Cost per kW<p class="body">(no change)</p></label>
                                 <input type="text" id="cent-cost2" readonly>
 
                             </div>
-                            <div class="new2 change">
-                                <label> Hours of Operation(no change)</label>
+                            <div class="new2 change lab">
+                                <label>Hours of Operation<p class="body">(incl. new control reduction)</p></label>
                                 <input type="number" id="hours-operation" readonly>
                             </div>
                         </div>
-                        <div class="input-labels">
+                        <div class="input-labels lab">
                             <div class="new3">
-                                <label>Avg. Wattage of PEC Fixtures</label>
-                                <input type="number" id="avg-watt">
+                                <label>Avg. Wattage of PEC Fixtures<p class="body">(conservative est.)</p></label>
+                                <input type="number" id="avg-watt" readonly>
                             </div>
 
-                            <div class="new4">
+                            <div class="new4 lab">
                                 <label>Total Fixture count</label>
                                 <input type="number" id="fixture" readonly>
                             </div>
                         </div>
                         <div class="input-labels">
-                            <div class="new5">
+                            <div class="new5 lab">
                                 <label>Est. Annual kWh</label>
-                                <input type="number" id='Annualkwh-result' readonly>
+                                <input id='Annualkwh-result' readonly>
                             </div>
-                            <div class="new6">
+                            <div class="new6 lab">
                                 <label>Est. Annual cost</label>
                                 <input type="text" id="Annualcost-result" readonly>
                             </div>
