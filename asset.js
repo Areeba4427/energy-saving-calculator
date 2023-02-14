@@ -150,6 +150,7 @@ elements.forEach(element => {
     const hours = Number(selectHours.options[selectHours.selectedIndex].value);
     const new_hour = document.getElementById("hours-operation");
     new_hour.value = hours * 0.8 ;
+    console.log(quantity.value , hours , wattage.value);
     annualKwh.value = Math.round((quantity.value * hours * wattage.value) / 1000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     annualCost.value = formatter.format(Math.round((annualKwh.value.replace(/,/g, '') * cent), 2));
     fixture.value = quantity.value;
@@ -157,7 +158,7 @@ elements.forEach(element => {
     annualCostResult.value = formatter.format(Math.round((annualKwhResult.value.replace(/,/g, '') * cent), 2));
     console.log(annualKwh.value, annualKwhResult.value);
 
-    if (isNaN(annualKwh.value)) {
+    if ((annualKwh.value) == "NaN") {
       annualKwh.value = 0.00;
     }
     if (annualCost.value == '$NaN') {
@@ -172,7 +173,7 @@ elements.forEach(element => {
 
 function calkwh(arg1, arg2, p1, p2) {
 
-  const cal_function = (((arg2 - arg1) / arg1)) * 100;
+  var cal_function = (((arg2 - arg1) / arg1)) * 100;
 
   p1 = Number(p1.slice(1));
   p2 = Number(p2.slice(1));

@@ -9,15 +9,8 @@
 body {
     background-color: #324354;
     overflow-x: hidden;
-}
+    height: 350px;
 
-.background {
-    width: 430px;
-    height: 20px;
-    position: absolute;
-    /* transform: translate(-50%,-50%); */
-    /* left: 50%; */
-    /* top: 50%; */
 }
 
 
@@ -392,14 +385,14 @@ p {
 
 @media all and (max-width: 860px) {
     .calculator-header {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     form {
         width: 580px;
         height: 3100px;
         position: relative !important;
-        margin-top: 1600px !important;
+        margin-top: 1500px !important;
         left: 32%;
     }
 
@@ -443,7 +436,7 @@ p {
         width: 450px;
         height: 3050px;
         position: relative !important;
-        margin-top: 1600px !important;
+        margin-top: 1450px !important;
         left: 31%;
     }
 
@@ -474,7 +467,7 @@ p {
         position: relative !important;
         height: 3000px;
         position: relative !important;
-        margin-top: 1550px !important;
+        margin-top: 1400px !important;
         left: 37%;
     }
 
@@ -497,7 +490,7 @@ p {
         position: relative !important;
         height: 3000px;
         position: relative !important;
-        margin-top: 1550px !important;
+        margin-top: 1450px !important;
         left: 40%;
     }
 }
