@@ -434,7 +434,7 @@ p {
 @media all and (max-width: 590px) {
     form {
         width: 450px;
-        height: 3050px;
+        height: 3250px;
         position: relative !important;
         margin-top: 1450px !important;
         left: 31%;
@@ -465,7 +465,7 @@ p {
     form {
         width: 420px;
         position: relative !important;
-        height: 3000px;
+        height: 3300px;
         position: relative !important;
         margin-top: 1400px !important;
         left: 37%;
@@ -488,7 +488,7 @@ p {
     form {
         width: 380px;
         position: relative !important;
-        height: 3000px;
+        height: 3350px;
         position: relative !important;
         margin-top: 1450px !important;
         left: 40%;
