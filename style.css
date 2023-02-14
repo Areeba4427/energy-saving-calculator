@@ -436,8 +436,8 @@ p {
         width: 450px;
         height: 3250px;
         position: relative !important;
-        margin-top: 1450px !important;
-        left: 31%;
+        margin-top: 1500px !important;
+        left: 26%;
     }
 
     .calculator-header {
@@ -463,12 +463,12 @@ p {
 
 @media all and (max-width: 450px) {
     form {
-        width: 420px;
+        width: 330px;
         position: relative !important;
         height: 3300px;
         position: relative !important;
-        margin-top: 1400px !important;
-        left: 37%;
+        margin-top: 1600px !important;
+        left: 19%;
     }
 
     .sec1 {
@@ -480,17 +480,18 @@ p {
     }
 
     .result-label {
-        font-size: 22px;
+        font-size: 18px;
     }
 }
 
 @media all and (max-width: 350px) {
     form {
-        width: 380px;
+        width: 310px;
         position: relative !important;
-        height: 3350px;
+        height: 3400px;
         position: relative !important;
-        margin-top: 1450px !important;
-        left: 40%;
+        margin-top: 1600px !important;
+        left: 15%;
     }
+
 }
